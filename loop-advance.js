@@ -74,5 +74,3 @@ console.log('for... of --------------')
 for (let v of a4) {
   console.log(v)
 }
-
-//reduce function
