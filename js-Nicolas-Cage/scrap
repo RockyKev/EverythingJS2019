@@ -1,0 +1,86 @@
+
+// [
+//   {
+//     "story1": {
+//       "introText": "this",
+//       "introSpeaker": "this",
+//       "content": {
+//         "storybeat1": "example",
+//         "storybeat2": "example",
+//         "storybeat3": "example",
+//         "storybeat4": "example",
+//         "storybeat5": "example"
+//       },
+//       "choiceSet1": {
+//         "choice1": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         },
+//         "choice2": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         },
+//         "choice3": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         }
+//       },
+//       "choiceSet2": {
+//         "choice1": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         },
+//         "choice2": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         },
+//         "choice3": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         }
+//       },
+//       "choiceSet3": {
+//         "choice1": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         },
+//         "choice2": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         },
+//         "choice3": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         }
+//       },
+//       "choiceSet4": {
+//         "choice1": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         },
+//         "choice2": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         },
+//         "choice3": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         }
+//       },
+//       "choiceSet5": {
+//         "choice1": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         },
+//         "choice2": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         },
+//         "choice3": {
+//           "text": "this",
+//           "image": "https://imgur.com/text"
+//         }
+//       }
+//     }
+//   }
+// ]
