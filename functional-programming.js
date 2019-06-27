@@ -1,4 +1,5 @@
 //https://medium.com/free-code-camp/an-introduction-to-functional-programming-style-in-javascript-71fcc050f064
+//More advanced --> https://medium.com/@nadeesha/a-practical-guide-to-writing-more-functional-javascript-db49409f71
 
 // step 1 - for loop
 
