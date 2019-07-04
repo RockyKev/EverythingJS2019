@@ -55,20 +55,13 @@ Public: https://lynda-vue-overview--rockykev.repl.co
   </transition>
 
     <!-- a for loop and if statement --> 
-  <!-- <transition-group name="fade" tag="div"
-  enter-active-class="animated fadeInRight"
-  leave-active-class="animated fadeOutRight"> -->
-  <!-- controlling transition group with JS. v-on & @ are the same. v-on:example -->
   <transition-group name="fade" tag="div"
-  @beforeEnter="beforeEnter"
-  @enter="enter"
-  @leave="leave">
-
+  enter-active-class="animated fadeInRight"
+  leave-active-class="animated fadeOutRight">
     <div class="row d-flex mb-3 align-items-center" 
     v-for="(item,index) in products" 
     :key="item.id"
-    v-if="item.price<=Number(maximum)"
-    :data-index="index">
+    v-if="item.price<=Number(maximum)">
 
     <!-- buttons --> 
     <div class="col-1 m-auto">
@@ -102,7 +95,7 @@ Public: https://lynda-vue-overview--rockykev.repl.co
 
 
     <!-- VUE content --> 
-    <script src="script.js"></script>
+    <script src="script-older.js"></script>
 
 
   </body>

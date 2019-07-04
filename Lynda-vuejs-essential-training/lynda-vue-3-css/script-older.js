@@ -34,27 +34,6 @@ var app = new Vue({
   methods: {
       addItem: function(product) {
         this.cart.push(product);
-      }, 
-      beforeEnter: function(el) {
-        el.className='d-none'
-      },
-      enter: function(el) {
-        var delay=el.dataset.index * 100;
-        /*We need a delay timer. 
-        So this allows us to create a offset of time, based on their index. */
-
-        setTimeout(function() {
-          el.className="row d-flex mb-3 align-items-center animated fadeInRight" 
-        }, delay);
-      },
-      leave: function(el) {
-        var delay=el.dataset.index * 100;
-        /*We need a delay timer. 
-        So this allows us to create a offset of time, based on their index. */
-
-        setTimeout(function() {
-          el.className="row d-flex mb-3 align-items-center animated fadeOutRight" 
-        }, delay);
       }
   },
   computed: {
