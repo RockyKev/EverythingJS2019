@@ -1,6 +1,6 @@
 //function default parameters
 
-
+ 
 
 // function setColor(element, color = 'pink') {
 //   element.style.backgroundColor = color
