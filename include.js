@@ -2,7 +2,6 @@
 //Checking using Include
 //https://www.freecodecamp.org/news/the-complete-javascript-handbook-f26b2c71719c/
 
-
 export function includeTest() {
   array_tester = [1, 2, 3]
 
