@@ -13,6 +13,5 @@ const result = array[3];
 * null
 * throws a syntaxError
 
-<details><summary>ANSWER</summary>undefined</details>
-
 ```
+<details><summary>ANSWER</summary>undefined</details>
