@@ -266,3 +266,282 @@ const result = str.length;
 * false
 
 <details><summary>ANSWER</summary>true</details>
+
+## Test 3
+### 1. What is the value of "result"?
+
+```
+const func = function () {
+  return 2009;
+}
+const result = 262 && func();
+```
+
+* false
+* true
+* 2009
+* 262
+
+<details><summary>ANSWER</summary>2009
+  <p> This one is confusing> The && returns the left operand if it is false, otherwise... it returns the right operand. </p></details>
+  
+  
+ ### 2. What is the value of "result"?
+
+```
+const value = new Set([1, 2, 3]);
+value.add(1);
+const result = value.size;
+
+```
+
+* 3
+* 4
+* undefined
+* 2
+
+<details><summary>ANSWER</summary>3
+  <p> The Set object lets you start UNIQUE values of any type. A value can occur only once. There's already a '1' value, so it ignored it. </p></details>
+  
+  ### 3. What is the value of "result"?
+
+```
+const result = ~~(12.34);
+```
+
+* 12.34
+* -12
+* 12
+* -12.34
+
+<details><summary>ANSWER</summary>12
+  <p> the bitwise not (~) inverts all the bits of the operand and return a number. It removes the decimal.
+  </p></details>
+  
+
+### 4. What is the value of "result"?
+
+```
+const result = "1_2_3".split("_");
+
+```
+
+* 123
+* ["1", "2", "3"]
+* [1, 2, 3]
+
+<details><summary>ANSWER</summary>["1", "2", "3"]
+  <p> the split method splits a string object into an array of strings, using the separator string.
+  </p></details>
+  
+  
+  ### 5. What is the value of "result"?
+
+```
+const f = (r, v) => r + v;
+const result = [1, 2, 3].reduce(f, 0);
+```
+
+* 5
+* 0
+* 6
+
+<details><summary>ANSWER</summary>6
+  <p> 
+  the reduce() method applies a function to the array, and goes through each element to reduce it to a single value.
+  </p></details>
+  
+  
+### 6. What is the value of "result"?
+
+```
+const array = [1, 2, 3];
+array.shift();
+const result = array;
+```
+
+* throw a TypeError
+* [undefined, 1, 2, 3]
+* [2, 3]
+* [1, 2, 3]
+
+<details><summary>ANSWER</summary>[2, 3]
+  <p> The shift() method removes the first element of the array. </p></details>
+    
+### 7. What is the value of "result"?
+
+```
+const isTrue = false;
+const result = isTrue ? 2009 : 262;
+```
+
+* 2009
+* 262
+
+<details><summary>ANSWER</summary>262
+  <p> This is a ternary operator. If true, then return the 2009 value. It's false, so it returned 262.</p></details>
+      
+    
+    
+### 8. How to convert an object into a string?
+
+* JSON.parse()
+* JSON.valueOf()
+* JSON.toString()
+* JSON.stringify()
+
+<details><summary>ANSWER</summary> JSON.stringify()
+  <p> </p></details>
+     
+     
+## Test 4
+### 1. What is the value of "result"?
+
+```
+const result = 3 ** 3;
+```
+
+* 6
+* throws a SyntaxError
+* 27
+* 12
+* 9 
+
+<details><summary>ANSWER</summary> 27
+  <p> The ** raises the first operand to the power of the second operand.
+  </p></details>
+  
+### 2. What is the value of "result"?
+
+```
+cpmst result = !!null
+```
+
+* NaN
+* true
+* false
+
+<details><summary>ANSWER</summary> false
+  <p> (!) returns false. 
+      (!!) returns true.
+      null returns false.
+      !null returns true.
+      !!null returns false.
+  
+  </p></details>
+    
+    
+### 3. What is the value of "result"?
+
+```
+const result = Math.round (19.95);
+```
+
+* 20
+* NaN
+* 19
+
+<details><summary>ANSWER</summary>20
+  <p> 
+    round returns the value rounded to the neares integer.
+  </p></details>
+      
+      
+ 
+### 4. What is the value of "result"?
+
+```
+const value = Math.PI;
+const result = Math.ceil(value);
+```
+
+* 4
+* NaN
+* 3
+* Undefined
+
+<details><summary>ANSWER</summary>2009
+  <p> 
+    Math.PI gives you 3.14159. 
+    Ceil rounds up.
+  </p></details>
+           
+
+### 5. What is the value of "result"?
+
+```
+let value = 0;
+
+do {
+  value += 1;
+  } while (false); 
+  
+  const result = value;
+```
+
+* throw a ReferenceError
+* 1
+* 0
+* 10
+
+<details><summary>ANSWER</summary>1
+  <p> 
+    do loops are always executed once.
+  </p></details>
+                 
+                 
+                 
+                
+### 6. Which is not a primative data type in JavaScript?
+
+* number
+* boolean
+* undefied
+* string
+* char
+
+<details><summary>ANSWER</summary>2009
+  <p> 
+    A primitive (primitive value, primitive data type) is data that is not an object and has no methods. In JS, there are 6 primpitive data types: string, number, boolean, null, undefined, symbol.
+  </p></details>
+ 
+ 
+
+### 7. What is the value of "result"?
+
+```
+const array = [1, 2, 3];
+const result = array.join();
+
+```
+
+* 1 2 3
+* 6
+* 123
+* throws a typeError
+* 1, 2, 3
+
+<details><summary>ANSWER</summary>1,2,3
+  <p> 
+    The join method joins all elements of an array into a string and returns that string. There's a option to add a separator, but if ommitted, they are separated by a comma.
+  </p></details>
+       
+       
+    
+### 8. What is the value of "result"?
+
+```
+let text = "ECMAScript"
+const result = text.charAt(1);
+```
+
+* 
+*
+*
+*
+
+<details><summary>ANSWER</summary>2009
+  <p> 
+    Arrays start at 0.
+  </p></details>
+         
