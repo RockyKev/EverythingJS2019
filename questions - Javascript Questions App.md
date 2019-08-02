@@ -535,13 +535,318 @@ let text = "ECMAScript"
 const result = text.charAt(1);
 ```
 
-* 
-*
-*
-*
+* E
+* C
+* M
+* A
 
-<details><summary>ANSWER</summary>2009
+<details><summary>ANSWER</summary>C
   <p> 
     Arrays start at 0.
   </p></details>
          
+
+## Test 5
+### 1. What is the value of "result"?
+
+```
+const str = "JavaScript";
+const result = str.replace(/a/g, "e");
+```
+
+* JeveScript
+* JevaScript
+* ECMAScript
+* JaveScript
+
+<details><summary>ANSWER</summary> JeveScript
+  <p> 
+    replace() methods replaces strings. The 'g' flag is a global search.
+  </p></details>
+    
+### 2. What is the value of "result"?
+
+```
+const result = typeof false;
+```
+
+* boolean
+* null
+* false
+* number
+* true 
+
+<details><summary>ANSWER</summary> boolean
+  <p> 
+typeof operator returns a string indicating the type of operand.
+  </p></details>
+    
+### 3. What is the value of "result"?
+
+```
+var prop = 1;
+var prop = 2;
+
+const result = prop;
+
+```
+
+* 3
+* 1
+* null
+* throw a SyntaxError
+* 2
+
+<details><summary>ANSWER</summary> 2
+  <p> 
+You can declare a var statement with the same name multiple times.
+  </p></details>
+    
+    
+### 4. What is the value of "result"?
+
+```
+const array = [1, 2, 3];
+const result = array instanceof Array;
+```
+
+* true
+* throw a TypeError
+* false
+
+<details><summary>ANSWER</summary> true
+  <p> 
+ The "instanceof" operator tests weather the prototype property of a constructor appears anywhere in the protoype chain of an object.
+  </p></details>
+    
+### 5. What is the value of "result"?
+
+```
+let numbers = [262, 2009, 95];
+let [first, second, third] = numbers;
+
+result = second
+```
+
+* 2009
+* 262
+* 95
+* 3
+
+<details><summary>ANSWER</summary> 2009
+  <p> 
+ The destructuring assignment is a JavaScript expression to unpack values from arrays, properties from objects, into dinstct variables.
+  </p></details>
+    
+### 6. What is the value of "result"?
+
+```
+const a = [1, 2, 3, 4, 5];
+const sliced = a.slice(1, a.length - 1); 
+const result = sliced.join("");
+```
+
+* 34
+* 2345
+* 234
+* 23
+* 3
+
+<details><summary>ANSWER</summary> 234
+  
+  <p> 
+  The slice() method returns a shallow copy of a portion of an array.
+  slice (beginning, end). The original array will not be modified. 
+  join() returns it into a string.
+  </p></details>
+    
+### 7. Which of the following method is used to get the last element in array?
+
+
+* unshift()
+* shift()
+* pop()
+* push()
+
+<details><summary>ANSWER</summary> pop()
+  
+  <p> 
+pop() removes the last element from an array and returns taht element. This changes the array.
+  </p></details>
+    
+### 8. What is the value of "result"?
+
+```
+const number = 12.3456;
+const result = number.toPrecision(2);
+```
+
+* 12.34
+* 12
+* 12.4
+* 12.35
+* 12.3
+
+<details><summary>ANSWER</summary> 234
+  
+  <p> 
+  toPrecision(2) returns a string representing the Number object to a specified precision. Provided x total length of string.
+  toFixed() method formats a number using a fixed-point notation. Provides (n) length after the decimal point.
+  
+  </p></details>
+    
+## Test 6
+### 1. What is the value of "result"?
+
+```
+const result = "ECMAScript".slice(1, -1)
+```
+* CMA
+* ECMAScrip
+* CMAScrip
+* CM
+
+<details><summary>ANSWER</summary> CMAScrip
+  
+  <p> 
+  The slice(BeginningIndex, EndIndex) method extracts a section of a string and returns it as a new string, without modifying the original. If negative, it treats as strLength + beginIndex. EndIndx is optional.
+  </p></details>
+    
+
+### 2. What is the value of "result"?
+
+```
+const array = [1, 2, 3];
+array.push(4);
+array.pop();
+const result = array.length;
+```
+
+* 4
+* undefined
+* 3
+* 5
+* 2
+
+<details><summary>ANSWER</summary> 
+  
+  <p> 
+ push() method adds an element to the end of the array. pop() removes the last element of the array, and returns that element. 
+  </p></details>
+    
+
+### 3. What is the value of "result"?
+
+```
+const value = -2009;
+const result = Math.abs(value);
+
+```
+
+* 1
+* -2009
+* 2009
+
+<details><summary>ANSWER</summary> 234
+  
+  <p> 
+Math.abs() function returns the absolute value of a number.
+  </p></details>
+    
+
+### 4. What is the value of "result"?
+
+```
+const result = true + true;
+```
+
+* 0
+* NaN
+* 2
+* 1
+
+<details><summary>ANSWER</summary> 2
+  
+  <p> 
++ operator converts booleans into numbers. true = 1, false = 0.
+</p></details>
+    
+### 5. What is the value of "result"?
+
+```
+const str = "JavaScript";
+const substr = "str.substr(1, 4);
+const substring = str.substring(1, 4);
+const result = substr.indexOf(substring);
+```
+
+* -1
+* 4
+* 1
+* 0
+
+<details><summary>ANSWER</summary> 0
+  
+  <p> 
+
+substr() method returns the part of a string between the start index and a number of characters after it.
+substring() returns the part of the string between the start and end index, or the end of the string.
+The indexOf() method returns the index within the calling String object of the first occurance of the specificd value, staring the search at fromIndex.
+
+</p></details>
+    
+### 6. What is the value of "result"?
+
+```
+const a = [1, 2, 3, 4, 5];
+const result = a.push(6) - a.pop();
+```
+
+* NaN
+* 6
+* 0
+* -1
+
+<details><summary>ANSWER</summary> 0
+  
+  <p> 
+  The push() method adds one or more elements to the end of an array and returns the new length of the array. The pop() method removes the last ement from an array and reurns that element.
+</p></details>
+    
+### 7. What is the value of "result"?
+
+```
+const User = function (name) {
+  this.name = name;
+};
+
+const user1 = new User("Brendan")
+const user2 = new User("Brendan")
+const result = user1 === user2;
+```
+
+* false
+* true
+
+<details><summary>ANSWER</summary> false
+  
+  <p> 
+  The new operator creates a new insance of a user-defined object or of one of the built in functions 
+  </p></details>
+    
+### 8. What is the value of "result"?
+
+```
+const check = (value) => value === 2;
+const result = [1, 2, 3].every(check);
+```
+
+* true
+* false
+
+<details><summary>ANSWER</summary> false
+  
+  <p> 
+ the every() method tests weather all the elements in teh array pass the test implemnted by the provided function.
+  </p></details>
+    
