@@ -850,3 +850,325 @@ const result = [1, 2, 3].every(check);
  the every() method tests weather all the elements in teh array pass the test implemnted by the provided function.
   </p></details>
     
+
+## Test 7
+### 1. What is the value of "result"?
+
+```
+const array = [1, 2, 3]
+array.concat (4, 5, 6)
+const result = array;
+```
+
+* [1, 2, 3, 4]
+* [4, 5, 6]
+* [1, 2, 3] 
+* [1, 2, 3, 4, 5, 6]
+* throw a typeError
+
+<details><summary>ANSWER</summary> [1, 2, 3]
+  
+  <p> 
+concat() merges two or more arrays. It does not change the existing array, and needs to pass the results somewhere else.
+
+</p></details>
+
+### 2. What is the value of "result"?
+
+```
+let value = 95
+const result = value--;
+```
+
+* undefined
+* 94
+* 95
+
+<details><summary>ANSWER</summary> 95
+  
+  <p> 
+the decrement operator is after the value - so post.
+
+</p></details>
+
+### 3. What is the value of "result"?
+
+```
+const result = Math.sqrt(4);
+```
+
+* 4
+* 8
+* 2
+* 16
+
+<details><summary>ANSWER</summary>2
+  
+  <p> 
+The square root.
+
+</p></details>
+
+### 4. What is the value of "result"?
+
+```
+const value = "2009"
+const result = Number.isFinite(value);
+```
+
+* false
+* true
+
+<details><summary>ANSWER</summary>
+  
+  <p> 
+the method --> isFinite() checks to see if the value is a finite number. It does not convert a parameter to a number.
+If the argument is NaN, or Positive/Negative infinity, it returns false.
+  
+the global --> isFinite() does convert ( PLEASE CHECK?). 
+</p></details>
+
+### 5. What is the value of "result"?
+
+```
+const array = [1, 2, 3]
+const copy = array.reserve();
+const result = copy === array;
+```
+
+* true
+* false
+
+<details><summary>ANSWER</summary>
+  true
+  <p> 
+
+The sequence of events is:
+1) it reverses 'array' to [3, 2, 1]
+2) then it passes those values to 'copy'
+3) Then it compares each other.
+</p></details>
+
+### 6. What is the value of "result"?
+
+```
+const result = 11 % 3;
+```
+
+* 0
+* 1
+* NaN
+* 2
+
+<details><summary>ANSWER</summary>
+  2
+  <p> 
+The remainder operator.
+
+</p></details>
+
+### 7. What is the value of "result"?
+
+```
+const array = [1, 4, 9]
+const result = 2 in array;
+```
+
+* true
+* false
+
+<details><summary>ANSWER</summary> true
+  
+  <p> 
+The in operator checks to see if the property exists (not the value). 
+So it's asking, does 'array' have a index 2? 
+That's true - and that index 2 has a value of 9.
+</p> </details>
+
+### 8. What is the right syntax for arrow function?
+
+
+* () -> {}
+* () => {}
+* () ==> {}
+* () > {}
+
+<details><summary>ANSWER</summary>
+  () => {}
+  
+  <p> 
+
+
+</p></details>
+
+## Test 8
+
+### 1. What is the value of "result"?
+
+```
+const a = [1, 2, 3, 4, 5]
+const result = a.shift() - a.pop()
+```
+
+* 4
+* 6
+* -4
+* 0
+
+<details><summary>ANSWER</summary>
+  
+  <p> 
+shift() 'shifts' the first value of the array. == 1
+pop() 'pops' the last value of the array. == 5
+
+result = 5 - 1
+</p></details>
+
+
+### 2. What is the value of "result"?
+
+```
+const array = [1, 2, 3];
+const result = array.includes(2);
+```
+
+* throw a TypeError
+* false
+* true
+
+<details><summary>ANSWER</summary>
+true  
+  <p> 
+the includes() method detemermines whether an array includes a certain element. the value of 2 is in that array.
+
+</p></details>
+
+### 3. What is the value of "result"?
+
+```
+const variable = "World";
+const str = `Hello, ${variable}!`;
+
+const result = str;
+```
+
+* Hello, variable!
+* throw a ReferenceError
+* Hello, World!
+* Hello ${World}!
+* Hello, !
+
+<details><summary>ANSWER</summary>
+  Hello, World!
+  <p> 
+This is the same.
+
+const str = `Hello, ${variable}!` <--- backticks
+const str = "Hello, " + variable <--- quotes
+
+</p></details>
+
+### 5. What is the value of "result"?
+
+```
+let value = 2009;
+if (value > 1) {
+  let value = 262;
+}
+const result = value
+```
+
+* 2009
+* 1
+* 262
+
+<details><summary>ANSWER</summary> 2009
+  
+  <p> 
+In this scenario, there are actually two 'let value' variables that were declared. 
+
+The second let is declared within a block scope and is a local variable. 
+So after the if statement, the result is equal to the first let.
+
+</p></details>
+
+### 5. What is the value of "result"?
+
+```
+const result = 1.2e3;
+```
+
+* 1234
+* throw a SyntaxError
+* 1200
+* 123
+* 12000
+
+<details><summary>ANSWER</summary>
+1200  
+  <p> 
+
+This is known a e-notation. It represents that a number should be multipled by 10 raised to a given power.
+</p></details>
+
+### 6. What is the value of "result"?
+
+```
+const value = 2009;
+const result = eval("value + value");
+```
+
+* 4018
+* NaN
+* 2009
+* undefined
+
+<details><summary>ANSWER</summary> 4018
+    
+  <p> 
+The eval() function evaluates the JS code that's represented in a string. 
+  it's a very dangerous function, as malicious users can write JS code in your string input, and execute unwanted code.
+
+</p></details>
+
+### 7. What is the value of "result"?
+
+```
+const check = (value) => value === 2;
+const result = [1, 2, 3].some(check);
+```
+
+*
+*
+
+<details><summary>ANSWER</summary>
+true  
+  <p> 
+    
+    some() is checking to see if the function matches true. So the result is [false, true, false]. If one is true, then result = true.
+    every() is the opposite, checking to see if ALL values are true. If all is true, then result = true.
+
+</p></details>
+
+### 1. What is the value of "result"?
+
+```
+const array = [1, 2, 3];
+array.length = 0;
+const result = array[0];
+```
+
+* undefined
+* throw a TypeError
+* NaN
+* 1
+* 3
+
+<details><summary>ANSWER</summary>
+  undefined
+  <p> 
+The original array length was 3. 
+By making it zero, you forced the array to drop all the values. 
+    Now, when you call it, array is showing undefined.
+
+</p></details>
