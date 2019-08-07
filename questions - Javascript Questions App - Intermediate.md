@@ -209,3 +209,179 @@ User.prototype.getName = function() {}
 
 typeof returns 'function' string for function. 
 </p></details>
+
+## Test 2
+### 1. What is the value of "result"?
+
+```
+const map = v => v * v;
+const array = Array.from ([1, 2, 3]);
+const result = array.join("");
+
+```
+
+* 149
+* 1,2,3
+* 6
+* 123
+* 14
+
+
+<details><summary>ANSWER</summary>
+149
+<p> 
+  
+Array.from() creaes a shallow-copied Array instance. 
+map calls a function on every element in the array.
+,join("") merges into each other.
+</p></details>
+
+### 2. What is the value of "result"?
+
+```
+const array = [1, 2, 3];
+const result = 3 in array;
+```
+
+* false
+* true
+
+<details><summary>ANSWER</summary>
+false
+<p> 
+
+The operator is askig if the array has a index item '3'. It does not.
+</p></details>
+
+### 3. What is the value of "result"?
+
+```
+const func = function (x, y = 4) {
+ return x + y
+}
+
+const result = func(2);
+```
+
+* NaN
+* undefined
+* 8 
+* 6
+* 2
+
+<details><summary>ANSWER</summary>
+6
+<p> 
+func takes two parameters. x, and y (which if it doesn't exist, defaults to 2). 
+  
+  So calling func(4) is the same as calling func(4, 2).
+</p></details>
+
+### 4. What is the value of "result"?
+
+```
+const numbers = [2009, 95, 262];
+const [first, ...rest ] = numbers;
+const result = rest[1];
+```
+
+* 
+<details><summary>ANSWER</summary>
+262
+<p> 
+The destructuring assignmnet syntax is a JS expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. When destructuring an array, you can unpack and assign the remaining part of it to a variable using the rest pattern.
+
+</p></details>
+
+
+### 5. What is the value of "result"?
+
+```
+const o = {
+ name: "ECMAScript",
+ version: 2016
+};
+
+const result = Object.values(o).join("");
+
+```
+
+* null
+* ECMAScript2016
+* undefined
+* nameVersion
+<details><summary>ANSWER</summary>
+ECMAScript2016
+
+<p> 
+Object.values() returns an array whose elements are the enumerable property values found on the object. 
+  That ordering of the properties is the same as that given by looping over the property values of the object nanually. 
+</p></details>
+
+
+### 6. What is the value of "result"?
+
+```
+const result = Number.parseInt("1995 year");
+```
+
+* null
+* 1995
+* undefined
+* NaN
+
+<details><summary>ANSWER</summary>
+1995
+<p> 
+
+the Number.parseInt() parses a string argument and returns an integer. 
+If the first character cannot be converted to a number, NaN is returned.
+</p></details>
+
+
+### 7. What is the value of "result"?
+
+```
+let name = 1;
+({name} = {name: 3});
+
+const result = name;
+```
+
+* 1
+* throws a SyntaxError
+* 3
+* NaN
+* undefined
+
+<details><summary>ANSWER</summary>
+3
+<p> 
+The destructuring assignment syntax is a javaScript expression that makes it possible to unpack values from arrays, or properteis from jobjects, into distinct variables. 
+  
+
+</p></details>
+
+
+### 8. What is the value of "result"?
+
+```
+const array = [1, 2, 3];
+let result 1;
+
+for (const value of array) {
+  result *= value;
+}
+```
+
+* throw a TypeError
+* 36
+* 0
+* 6
+
+<details><summary>ANSWER</summary>
+6
+<p> 
+
+The for... of statement creates a loop iterating over iterable objects (including the built-in Stirng, Array, TypedArray, Map and Set, and user-defined iterables, invokin a custom interation hook with statements to be executed for the value of each distinct property of the object.
+</p></details>
