@@ -1150,7 +1150,7 @@ true
 
 </p></details>
 
-### 1. What is the value of "result"?
+### 8. What is the value of "result"?
 
 ```
 const array = [1, 2, 3];
