@@ -149,3 +149,41 @@ display(gorilla.dailyRoutine())
 // display(gorilla.sleep());
 // display(gorilla.showVigour());
 // display(gorilla.dailyRoutine());
+
+
+
+/* THIS IS PART 2 - using super */
+class Animal {
+  constructor(name, height) {
+    this.name = name;
+    this.height = height;
+  };
+
+  speak() {
+    console.log(`${this.name} makes a noise!`);
+  }
+}
+
+
+const animal = new Animal('Gregor', 5);
+const animal2 = new Animal('Stacy', 4);
+
+animal.speak();
+animal2.speak()
+
+console.log(this === window);
+
+class Lion extends Animal {
+  constructor(name, height) {
+    super(name,height);
+    this.specials = 'Lion';
+  }
+
+  speak() {
+    super.speak();
+    console.log(`${this.name} roars!`);
+  }
+}
+
+const liony = new Lion('fuzzy', 5)
+liony.speak()
