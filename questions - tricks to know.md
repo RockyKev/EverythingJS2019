@@ -75,3 +75,6 @@ About the startwith method.
 
 https://itnext.io/javascript-fundamentals-mastering-classes-38e7668023be
 About classes
+
+https://codeburst.io/javascript-essentials-numbers-and-math-72655b2e5edd
+Math
