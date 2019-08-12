@@ -61,3 +61,8 @@ Day 29 🎄
 2 Ways to Repeat Strings in JavaScript
 Day 30 🎄
 4 Ways to Combine Strings in JavaScript
+
+
+https://codeburst.io/javascript-essentials-arrays-2d275b9598c5
+
+All about arrays
