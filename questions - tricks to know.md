@@ -1,5 +1,6 @@
 https://medium.com/dailyjs/codetidbits30-9a782b17fa89
 
+```
 Code Notes
 Day 1 🎄
 2 Methods to Convert to true Array
@@ -61,8 +62,16 @@ Day 29 🎄
 2 Ways to Repeat Strings in JavaScript
 Day 30 🎄
 4 Ways to Combine Strings in JavaScript
-
+```
 
 https://codeburst.io/javascript-essentials-arrays-2d275b9598c5
 
 All about arrays
+
+
+https://medium.com/dailyjs/string-startswith-method-in-javascript-b12ec998eb54
+
+About the startwith method.
+
+https://itnext.io/javascript-fundamentals-mastering-classes-38e7668023be
+About classes
