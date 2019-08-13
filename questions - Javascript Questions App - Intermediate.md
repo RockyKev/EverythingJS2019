@@ -790,8 +790,307 @@ Since the value was omitted, 'undefined' was returned instead.
 
 
 
+## Test 5
+### 1. What is the value of "result"?
+
+```
+const value = 23.45;
+const result = value.toFixed(1)
+```
+
+* 23.5
+* 23
+* 23.45
+* 24
+* 23.4
+
+<details><summary>ANSWER</summary>
+23.4
+  
+<p> 
+
+toFixed([digits]) returns a string representation of "value" that does not round it. It also takes the value AFTER the decimal.  
+
+</p></details>
+
+
+### 2. Which method does not exist in Array.prototype?
+
+
+* map
+* forEach
+* reduce
+* call
+* slice
+
+<details><summary>ANSWER</summary>
+
+call
+
+<p> 
+
+call method belongs to Function.prototype.
+</p></details>
 
 
 
+### 1. What is the value of "result"?
+
+```
+const array = [1, 2, 3];
+let result = 0;
+for (const value in array) {
+  result += +value; 
+}
+```
+
+* 5
+* 0123
+* 0012
+* 6
+* 3
+
+<details><summary>ANSWER</summary>
+3
+<p> 
+
+The for... in statement iterates over all non-SYmbol, enumerable properties of an object (or array indexes -- not their values). Thei unary plus operator precedes its operand and evaluates to its operand but attempts to convert it into a number, if it isn't ready.
+</p></details>
+
+### 4. What is the value of "result"?
+
+```
+let first = 262;
+let second = 2009;
+
+[first, second] = [second, first]; 
+
+const result = first;
+```
+
+* throw a TypeError
+* null
+* 262
+* 2009
+
+<details><summary>ANSWER</summary>
+2009
+<p> 
+
+This is destructuring syntax, which allows you to unpack arrays/properties of values, into distinct variables. 
+
+The destructuring happens on the temporary array, which has the values of "first" and "second" copied into it's first and second position. 
+
+</p></details>
+
+### 5. What is the value of "result"?
+
+```
+const array = [1, 2, 3];
+const arrayNext = array;
+arrayNext.length = 0;
+
+const result = array[0]
+
+```
+
+* null
+* undefined
+* 1
+* 1, 2, 3
+
+<details><summary>ANSWER</summary>
+undefined
+<p> 
+arrayNext and array point to the same array objects. It didn't clone it. 
+So when length was used, it applied to both arrays. 
+  
+</p></details>
+
+### 7. What is the value of "result"?
+
+```
+const name = "Brendan"; 
+const obj = {
+  [name]: name
+  };
+  
+  const result = obj["name"];
+```
+
+* name
+* null
+* Brendan
+* undefined
+* throw a SyntaxError
+
+<details><summary>ANSWER</summary>
+undefined.
+<p> 
+
+For property names, you can intilize it as a object (putting it in brackets []). 
+So how this really looks like is: 
+
+const obj = {
+  ["Brendan"]: name;
+  }; 
+
+</p></details>
+
+### 7. What is the value of "result"?
+
+```
+const name = "JavaScript"; 
+const func = function() {
+  return this.name;
+};
+
+const obj = { 
+  name: "ECMAScript", 
+  func: func
+}; 
+
+const result = obj.func();
+```
+
+* undefined
+* JavaScript
+* null
+* ECMAScript
+
+<details><summary>ANSWER</summary>
+ECMAScript
+<p> 
+
+The 'this.name" inside the func is referring to to the name within the obj, not the global name.
+</p></details>
+
+### 1. What is the value of "result"?
+
+```
+let result = 2009;
+try {
+  result = 262;
+} finally {
+  result = 95;
+}
+```
+
+* 95
+* 262
+* 2009
+
+<details><summary>ANSWER</summary>
+95 
+<p> 
+
+Statements taht are executed after the try statement completes. These statements execute regardless of whetehr an exception was thrown/caught.
+
+</p></details>
+
+### 1. What is the value of "result"?
+
+```
+const SimpleNumber = function (value) {
+  return value;
+}
+const number = new SimpleNumber (2009);
+const result = number === 2009;
+
+```
+
+* true
+* false
+
+<details><summary>ANSWER</summary>
+false
+<p> 
+
+The new operator created an instance of the object. If constructor returns primitive value, it will ignore it and return "this" object.
+</p></details>
+
+### 2. What is the value of "result"?
+
+```
+const a = isFinite(null);
+const b = Number.isFinite(null);
+const result = a === b;
+```
+
+* true
+* false
 
 
+<details><summary>ANSWER</summary>
+false
+<p> 
+
+The Number.isFinite() function determines if the number passed is a finite number. 
+
+The global isFinite() doesn't forcibility convert he parameter to a number. 
+If the argument is NaN, positive infinity or negative infinity, this method returns false. Otherwise, it returns true. 
+
+</p></details>
+
+### 3. What is the value of "result"?
+
+```
+let result = 0;
+for (let i = 0; i < 5; i++) {
+  if (i % 2) {
+    result += i;
+  }
+}
+```
+
+* 0
+* 4
+* 15
+* 5 
+* 6
+
+<details><summary>ANSWER</summary>
+4
+<p> 
+i % 2 is truthy only for odd numbers.
+</p></details>
+
+### 4. What is the value of "result"?
+
+```
+let value = 2009;
+setTimeout (() => {
+  value = 262;
+  }, 0); 
+const result = value;
+
+```
+
+* undefined
+* 262
+* 2009
+
+<details><summary>ANSWER</summary>
+2009
+<p> 
+
+setTimeout will be invoked AFTEr initialization of result variable. 
+</p></details>
+
+
+### 5. What is the value of "result"?
+
+```
+const result = "1" + 1
+```
+
+* 11
+* 2
+* NaN
+
+<details><summary>ANSWER</summary>
+11 
+<p> 
+The addition operator pro
+
+</p></details>
