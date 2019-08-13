@@ -268,3 +268,56 @@ Multiple bindings like:
 
 ## v-html
 
+Great for strings that have html elements that need to be rendered!
+
+
+```
+new Vue({
+  el: '#app', 
+  data() {
+    return {
+      tacos: `I like <a href="#">Al Pastor</a> tacos`
+    }
+  }
+})
+--------------------- HTML ----------------
+
+<div id="app"> 
+  <h3> What is your favorite kind of taco? </h3> 
+  <p v-html="tacos"> </p>
+</div> 
+```
+
+## v-text
+It's similar to using the mustache templates. 
+
+These are the same.
+  <p v-text="tacos"> </p>
+  <p> {{ tacos }} </p>
+
+NOTE: If you want to dynamically update, it's recommended to use the mustache templates instead.
+
+```
+new Vue({
+  el: '#app', 
+  data() {
+    return {
+      tacos: `I like Al Pastor tacos`
+    }
+  }
+})
+--------------------- HTML ----------------
+
+<div id="app"> 
+  <h3> What is your favorite kind of taco? </h3> 
+  <p v-text="tacos"> </p>
+  <p> {{ tacos }} </p>
+  <p> <input v-model="tacos" /> </p> 
+</div> 
+```
+
+!(cheetsheet)[https://s3.amazonaws.com/media-p.slid.es/uploads/75854/images/3964241/Screen_Shot_2017-07-04_at_8.01.02_PM.png]
+!(cheetsheet2)[https://s3.amazonaws.com/media-p.slid.es/uploads/75854/images/3964242/Screen_Shot_2017-07-04_at_8.01.18_PM.png]
+
+https://css-tricks.com/guides/vue/
+
