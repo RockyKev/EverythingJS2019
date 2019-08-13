@@ -1091,6 +1091,71 @@ const result = "1" + 1
 <details><summary>ANSWER</summary>
 11 
 <p> 
-The addition operator pro
+The addition operator combines things when there's a string. 
 
+</p></details>
+
+### 6. What is the value of "result"?
+
+```
+const array = [1, 2, 3];
+const result = array.unshift(0); 
+
+```
+
+* 4
+* [1, 2, 3]
+* [0, 1, 2, 3]
+* [1, 2, 3, 0]
+
+<details><summary>ANSWER</summary>
+4
+<p> 
+
+The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+</p></details>
+
+
+### 7. What is the value of "result"?
+
+```
+const result = typeof !!null; 
+```
+
+* true
+* null
+* undefined
+* boolean
+* false
+
+<details><summary>ANSWER</summary>
+boolean
+<p> 
+
+The logical NOT '!' returns false/true. So it converted the null object into a boolean.
+</p></details>
+
+
+### 8. What is the value of "result"?
+
+```
+const User = function (name)  {
+  this.name = name;
+};
+
+const Brendan = new User("Brendan"); 
+const James = new Brendan.constructor("James");
+
+const result = James instanceof User;
+```
+
+* true
+* throw a SyntaxError
+* false
+
+<details><summary>ANSWER</summary>
+true
+<p> 
+"constructor" is a property of User.prototype that refers to the User function.
+  ALl instances of User constructor function have that property. The instanceof operator tests whether the prototype property of a constructor appears anywhere in the prototype chain of an object.
 </p></details>
