@@ -109,10 +109,162 @@ new Vue({
 2. v-model.number changes strings to number inputs
 3. v-model.lazy won't populate the content automatically. It will wait to bind until an event happens. (It listens to change events instead of input.)
 
+## v-if / v-show
+
+conditionals that will display information depending on meeting the requirement. This can be on anything - buttons, forms, divs, components.
+
+IF Statement
+```
+new Vue({
+  el: '#app', 
+  data() {
+   return {
+     tacos: ''
+   }
+  }
+})
+
+--------------------- HTML ----------------
+<div id="app">
+  <h3> What is your favorite kind of taco?</h3>
+  <textarea v-model="tacos"> </textarea>
+  
+  <br> 
+  <button type="submit" v-if="tacos">Let us know!</button>
+</div>  
+
+```
+
+IF/ELSE
+
+```
+new Vue({
+  el: '#app', 
+  data() {
+    return {
+      tacos: ''
+    }
+  }
+})
+
+--------------------- HTML ----------------
+<div id="app>
+  <h3> Do you like tacos? </h3> 
+  <input type="radio" id="yes" value="yes" v-model="tacos"> 
+  <label for="yes"> yes</label>
+  <br> 
+  <input type="radio" id="no" value="no" v-model="tacos"> 
+  <label for="no"> no</label> 
+
+  <br> 
+  <div v-if="tacos"> 
+    <p v-if="tacos === 'yes'" class="thumbs">👍</p>
+    <p v-else> you're a monster </p>
+  </div>
+</div>
+
+```
+
+## v-bind or ':'
+
+One of the most useful directives. It canbe used for many things - class and style binding, creating dynamic props, etc. 
+
+```
+new Vue({
+  el: '#app', 
+  data() {
+    return {
+      tacos: '', 
+      activeClass: 'active'
+    }
+  }
+})
+
+--------------------- HTML ----------------
+<div id="app">
+ <h3> What is your favorite kind of taco? </h3> 
+ <textarea v-model="tacos"> </textarea>
+ 
+ <br>
+ <button :class="[tacos ? activeClass : '']"> Let us know </button>
+</div> 
+
+```
+
+## v-once and v-pre
+Not quite as as useful. 
+
+v-once will not update once it's been rendered. 
+v-pre will print out the iner text exactly how it is, with code. 
+
+```
+new Vue({
+  el: '#app', 
+  data() {
+    return {
+      tacos: 'I like al Pastor tacos', 
+    }
+  }
+})
+--------------------- HTML ----------------
+<div id="app">
+ <h3> What is your favorite kind of taco? </h3> 
+ <p> <input v-model="tacos" /> </p>
+ 
+ <p v-once="tacos"> {{ tacos }} </p>
+ 
+ <span v-pre> this is good if I need to show you the mustache view of {{ tacos }} </span>
+ <pre> {{ $data }} </pre> 
+</div> 
+```
+
+## v-on or @
+
+Extremely useful (so there's a shortcut!)
+v-on is great for binding to events like click or mouseenter. You're able to pass in a parameter for the event like (e). 
+
+Also, ternaries directly. 
 
 
+```
+new Vue({
+  el: '#app', 
+  data() {
+    return {
+      counter: 0
+    }
+  }
+})
+--------------------- HTML ----------------
 
+<div id="app"> 
+  <div class="item"> 
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/backpack.jpg" width="235" height="300"/>
+   
+    <div class="quantity"> 
+      <button class="inc" @click="counter > 0 ? counter -=1 : 0"> - </button>
+      <span class="quant-text">Quantity: {{ counter }} </span> 
+      <button class="inc" @click="counter += 1"> + </button>
+    </div>
+    
+    <button class="submit" 2click=""> Submit</button> 
+  </div> 
+</div> 
+```
 
+Multiple bindings like: 
+<div v-on=" 
+  click : onClick,
+  keyup : onKeyup,
+  keydown : onKeydown
+  "> 
+</div> 
 
+@mousemove.stop is comparable to e.stopPropagation()
+@mousemove.prevent this is like e.preventDefault()
+@submit.prevent this will no longer reload the page on submission
+@click.once not to be confused with v-once, this click event will be triggered once. 
+@click.native so that you can listen to native events in the DOM.
 
+## v-html
 
