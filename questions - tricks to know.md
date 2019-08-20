@@ -82,3 +82,18 @@ Math
 
 https://codeburst.io/does-js-really-do-that-43f17bc01e9b
 Gotchas
+
+
+### Loops and Labels
+It’s also worth remembering that it’s possible to break out of nested loops using labels. These allow you to associate a break or continue statement with a specific loop:
+```
+loop1: for (let i = 0; i < haystacks.length; i++) {
+  loop2: for (let j = 0; j < haystacks[i].length; j++) {
+    if (haystacks[i][j] === needle) {
+      break loop1;
+    }
+  }
+}
+```
+
+
