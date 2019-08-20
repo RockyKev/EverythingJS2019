@@ -78,3 +78,7 @@ About classes
 
 https://codeburst.io/javascript-essentials-numbers-and-math-72655b2e5edd
 Math
+
+
+https://codeburst.io/does-js-really-do-that-43f17bc01e9b
+Gotchas
