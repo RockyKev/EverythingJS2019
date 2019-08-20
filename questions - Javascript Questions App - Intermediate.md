@@ -1159,3 +1159,327 @@ true
 "constructor" is a property of User.prototype that refers to the User function.
   ALl instances of User constructor function have that property. The instanceof operator tests whether the prototype property of a constructor appears anywhere in the prototype chain of an object.
 </p></details>
+
+## Test 7
+### 1. What is the value of "result"?
+
+```
+const result = true > false;
+```
+
+* true
+* false
+
+<details><summary>ANSWER</summary>
+true
+<p> 
+
+">" will convert values to numbers before comparison. So true becomes "1" and false becomes "0".
+</p></details>
+
+### 2. What is the value of "result"?
+
+```
+const result = Number.isInteger(95.0)
+```
+
+* true
+* false
+
+true
+<details><summary>ANSWER</summary>
+true
+<p> 
+  
+95.0 is also a integer within JavaScript.
+</p></details>
+
+### 3. What is the value of "result"?
+
+```
+const array = [1, 2, 3, 4, 5];
+const result = array.splice(1, 2, 3);
+```
+
+* [2, 3]
+* [1, 1, 2, 2, 3, 3]
+* [3, 3, 4, 5]
+* [1, 2, 3, 4, 5, 1, 2, 3]
+
+<details><summary>ANSWER</summary>
+
+[2, 3]
+<p> 
+
+Splice = splice(start, delete count). It changes the contents of an array, and returns an array with the deleted elements. 
+</p></details>
+
+### 4. What is the value of "result"?
+
+```
+const func = () => {};
+const result = func instanceof Object;
+```
+
+* true
+* false
+
+<details><summary>ANSWER</summary>
+true
+<p> 
+instanceof operator tests whethr the proptotype property of a constructor appears anywhere int he prototype chain of an object. Functions in JS are also objects. 
+</p></details>
+
+### 5. What is the value of "result"?
+
+```
+const { name } = {
+  name: "Brendan"
+};
+  
+const result = name;
+```
+
+* Brendan
+* undefined
+* null
+* name
+* throw a SyntaxError
+
+<details><summary>ANSWER</summary>
+Brendan
+<p> 
+
+The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. 
+</p></details>
+
+### 7. What is the value of "result"?
+
+```
+const items = [95, 262, 2015, 2009]; 
+const noop = (value) => value;
+
+for (var i = 0; i < items.length; i++) {
+  noop(items[i]);
+}
+
+const results = i;
+```
+
+* throw a ReferenceError
+* undefined
+* 2009
+* 0
+* 4
+
+<details><summary>ANSWER</summary>
+4
+<p> 
+
+"i" exists out of the for statement because of hoisting. That's JS's default behavior of moving all var declarations to the top of the current scope.
+</p></details>
+
+
+### 7. What is the value of "result"?
+
+```
+let value = 32;
+const result = value << 1;
+```
+
+* 16
+* 64
+* -32
+* 31
+
+<details><summary>ANSWER</summary>
+64
+<p> 
+This operator shifts the first operand the specified number of bits to the left. Excess bits shifted off to the left are discarded. Zero bits are shifted in from the right. Bitwise shifting any number x to the left by y bits yields x * (2 ** y)
+
+</p></details>
+
+### 8. What is the value of "result"?
+
+```
+const str = "JavaScript is not Java."l
+const result = str.replace("Java", "ECMA");
+```
+
+* ECMA
+* ECMAScript is not ECMA
+* ECMAScript is not Java
+* JavaScript is not Java
+* JavaScript is not ECMA
+
+<details><summary>ANSWER</summary>
+ECMAScript is not Java
+<p> 
+The replace() method searches a string for a specific value or regular expression, and returns a new string with the values replaced. Only the first instance of a string will be replaced.
+</p></details>
+
+## TEst 8
+### 1. What is the value of "result"?
+
+```
+const result = (1 && 2) || (0 && 3);
+```
+
+* 3
+* 2
+* 1
+* false
+* 0
+
+<details><summary>ANSWER</summary>
+2
+<p> 
+Logical AND ("&&") returns left operand if it can be converted to false, otherwise it returns the left operand. 
+Logical OR ("||") returns left operand if it can be converted to true, otherwise returns the right operand.
+
+</p></details>
+
+
+### 2. What is the value of "result" in a browser?
+
+```
+var prop = 95;
+const result = window.prop;
+```
+
+* null
+* 95
+* undefined
+* true
+* throw a ReferenceError
+
+<details><summary>ANSWER</summary>
+95
+<p> 
+When var is used in the global scope, it creates a new global variable, wihch is the property of the global object. (which is Window in browsers). That means you can accidentally overwrite an existing global using "var", as this code ddoes.
+
+</p></details>
+
+
+### 3. What is the value of "result"?
+
+```
+const obj = { 
+  value: 2009;
+}; 
+
+const func = function () {
+ this.value = 262;
+}
+
+func.call(obj);
+const result = obj.value;
+```
+
+* 2009
+* 262
+* undefined
+
+<details><summary>ANSWER</summary>
+262
+<p> 
+
+The call() method calls a function iwht a given 'this' value. 'this' represents 'obj' in this case, and the function modifies it.
+</p></details>
+
+### 4. What is the value of "result" in a browser?
+
+```
+let prop = 95;
+const result = window.prop
+```
+
+* null
+* undefined
+* true
+* throw a ReferenceError
+* 95
+
+<details><summary>ANSWER</summary>
+undefined
+<p> 
+The "left" declaration does not create a property on the global object (var does). This lack of global object modification makes "let" and "const" much safer to use in the global than "var" declaration.
+</p></details>
+
+### 5. What is the value of "result"?
+
+```
+const array = [5, 1, 3, 4, 2];
+const result = array.sort( (a, b) = b - a);
+```
+
+* [2, 4, 3, 1, 5]
+* [5, 1, 3, 4, 2]
+* [1, 2, 3, 4, 5]
+* [5, 4, 3, 2, 1]
+
+<details><summary>ANSWER</summary>
+[5, 4, 3, 2, 1]
+<p> 
+The array.sort([compareFunction]) method sorts the elements of an array in place and returns the array. If compareFunction is supplied, all non-undefined array elements are sorted according to the return value of the comapre function. If compareFunction(a, b) is less than 0 then a comes before b. 
+
+</p></details>
+
+### 6. What is the value of "result"?
+
+```
+const str = "{\"name\":\"Brendan\"};
+const json = JSON.parse(str);
+const result = json.name;
+```
+
+* Brendan
+* undefined
+* throw a ReferenceError
+
+<details><summary>ANSWER</summary>
+Brendan
+<p> 
+The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string.
+</p></details>
+
+### 7. What is the value of "result"?
+
+```
+const result = typeof Object;
+```
+
+* throw a TypeError
+* Object
+* function
+* object
+
+<details><summary>ANSWER</summary>
+function
+<p> 
+
+The Object constructor creates an object wrapper. So the Constructor is a function. 
+</p></details>
+
+### 8. What is the value of "result"?
+
+```
+let result = 2009;
+try {
+  result = 262/0;
+} catch (e) {
+  result = 0 / 262;
+}
+```
+
+* throw a TypeError
+* 2009
+* Infinity
+* 0
+
+<details><summary>ANSWER</summary>
+Infinity
+<p> 
+
+Division by 0 returns Infinity in JavaScript. There's no error.
+</p></details>
