@@ -83,6 +83,7 @@ Math
 https://codeburst.io/does-js-really-do-that-43f17bc01e9b
 Gotchas
 
+https://hackernoon.com/how-to-manipulate-arrays-in-javascript-ea5ln2ata All the loops
 
 ### Loops and Labels
 It’s also worth remembering that it’s possible to break out of nested loops using labels. These allow you to associate a break or continue statement with a specific loop:
