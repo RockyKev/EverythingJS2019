@@ -1,0 +1,42 @@
+<!-- https://codepen.io/rockykev/pen/XWrZEYO?editors=1011 --> 
+
+<input id="my-input" type="text" />
+<button id="my-button">Save</button>
+<div id="my-result"></div>
+
+<!-- original pen by michael steinberg -->
+
+
+
+<script> 
+// Your custom class code goes here
+class Dog {
+  constructor(name, breed){
+    this.name = name;
+    this.breed = breed;
+  }
+  
+  rename(newname){
+    this.name = newname;
+  }
+  
+  speak() {
+    return (`${this.name} goes "bark bark bark!"`)
+  }
+  
+}
+
+// Write the code to create an instance of your class here
+const sparky = new Dog('Sparky', "German Shepard"); 
+
+
+const myInputEl = document.getElementById('my-input');
+const myButtonEl = document.getElementById('my-button');
+const myResultEl = document.getElementById('my-result');
+
+myButtonEl.onclick = () => {
+  
+  sparky.rename(myInputEl.value);
+  myResultEl.textContent = sparky.speak();
+}
+</script>
