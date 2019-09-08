@@ -57,3 +57,61 @@ class Counter {
     }
 
 ```
+## Uses
+
+```
+//#1
+var ninjaGreeting = () => console.log("hiiiiya");
+
+ninjaGreeting();
+```
+```
+//#2
+var ninjaGreeting = (name) => {console.log(`${name} says hiiiiya`)};
+
+ninjaGreeting('Mark');
+```
+```
+//#3
+var ninjaGreeting = name => console.log(`${name} says hiiiiya`);
+
+ninjaGreeting('Mark');
+```
+
+```
+//#4 -- when you don't use arrow function.
+//"CodePen chopped the enemy x times."
+// Solve by doing something like '_this = this', and then calling that.
+var ninja = {
+   name: "Ryu",
+  
+   chop(x) {
+     window.setInterval(function() {
+       if (x > 0) {
+       console.log(this.name + " chopped the enemy " + x + " times." );
+       x--;
+       }    
+     }, 1000);
+   }
+ }; 
+
+ ninja.chop(5);
+```
+```
+//#5 -- when you use arrow function.
+"Ryu chopped the enemy x times."
+var ninja = {
+  name: "Ryu",
+  
+  chop(x) {
+    window.setInterval(() => {
+      if (x > 0) {
+      console.log(this.name + " chopped the enemy " + x + " times." );
+      x--;
+      }    
+    }, 1000);
+  }
+}; 
+
+ninja.chop(5);
+```
