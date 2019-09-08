@@ -1,3 +1,4 @@
+```
 const animals = [
   {
     "name": "cat",
@@ -40,3 +41,4 @@ function smallAnimals_Filter() {
     return animal.size === "small"
   })
 }
+```
