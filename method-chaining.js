@@ -14,8 +14,45 @@ const items = numbers
 console.log(items);
 
 
+//Chaining part 2
+class User {
+  constructor(email, name) {
+    this.email = email; 
+    this.name = name;
+    this.score = 0;
+    console.log(`User ${this.name} created.`);
+  }
+  login() {
+    console.log(this.email, 'just logged in.');
+    return this; //ADD THis, so it returns the object
+  }
+
+  logout() {
+    console.log(this.email, 'just logged out.');
+    return this; //ADD THis, so it returns the object
+  }
+
+  updateScore(){
+    this.score++;
+    console.log(this.email, 'score is now', this.score);
+    return this; //ADD THis, so it returns the object
+  }
+
+}
+
+let userOne = new User('ryu@ninjas.com', 'Ryu');
+let userTwo = new User('yoshi@mariokorp.com', 'Yoshi');
+
+userOne.login();
+userTwo.logout();
+
+//method chain
+
+userOne.updateScore().updateScore().updateScore().logout();
 
 
+
+/* ************************************************************************* */
 //NOT using ES6 shortcuts
 
 const Bar = function() {
