@@ -14,3 +14,18 @@ var isMale = function(x){
 }
 
 myFriends.filter(isMale); // John, Mike, Richard, Keith
+
+/* FILTERING ARRAY */
+//old way
+const numbers = [1, -1, 2, 3];
+
+const filtered1 = numbers.filter(function(value) {
+  return value >= 0;
+});
+console.log(filtered1);
+
+
+//arrow function way
+const filtered2 = numbers.filter(value => value >= 0 );
+
+console.log(filtered2);
