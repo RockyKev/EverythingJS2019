@@ -191,21 +191,38 @@ liony.speak()
 
 /* **************************** */
 
-var userOne = {
-  email: 'ryu@ninjas.com',
-  name: 'Ryu',
-
+class User {
+  constructor(email, name) {
+    this.email = email; 
+    this.name = name;
+    this.score = 0;
+    console.log(`User ${this.name} created.`);
+  }
   login() {
-    console.log(this.email, "has logged in");
-  }, 
+    console.log(this.email, 'just logged in.');
+    return this; //ADD THis, so it returns the object
+  }
 
   logout() {
-    console.log(this.email, "has logged out");
+    console.log(this.email, 'just logged out.');
+    return this; //ADD THis, so it returns the object
+  }
+
+  updateScore(){
+    this.score++;
+    console.log(this.email, 'score is now', this.score);
+    return this; //ADD THis, so it returns the object
   }
 
 }
 
-//console.log(userOne.email);
+let userOne = new User('ryu@ninjas.com', 'Ryu');
+let userTwo = new User('yoshi@mariokorp.com', 'Yoshi');
+
 
 userOne.login();
-userOne.logout();
+userTwo.logout();
+
+//method chain
+
+userOne.updateScore().updateScore().updateScore().logout();
