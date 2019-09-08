@@ -187,3 +187,25 @@ class Lion extends Animal {
 
 const liony = new Lion('fuzzy', 5)
 liony.speak()
+
+
+/* **************************** */
+
+var userOne = {
+  email: 'ryu@ninjas.com',
+  name: 'Ryu',
+
+  login() {
+    console.log(this.email, "has logged in");
+  }, 
+
+  logout() {
+    console.log(this.email, "has logged out");
+  }
+
+}
+
+//console.log(userOne.email);
+
+userOne.login();
+userOne.logout();
