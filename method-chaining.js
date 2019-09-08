@@ -1,6 +1,22 @@
 //method chaining
-//NOT using ES6 shortcuts
 
+
+
+//chaining
+const numbers = [1, -1, 2, 3];
+
+const items = numbers
+  .filter(n => n >= 0) //removes -1
+  .map(n => ({ value: n })) //map them into a object
+  .filter(obj => obj.value > 1) //looks for objects greater than 1
+  .map(obj => obj.value); //map the obj to a variable
+
+console.log(items);
+
+
+
+
+//NOT using ES6 shortcuts
 
 const Bar = function() {
   this.first = "not"
@@ -88,4 +104,5 @@ MyHobby.prototype = new Hobby()
 const student = new MyHobby("Studying the swang")
 
 student.sayHobby()
+
 
