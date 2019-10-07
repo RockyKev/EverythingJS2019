@@ -97,4 +97,8 @@ loop1: for (let i = 0; i < haystacks.length; i++) {
 }
 ```
 
+### This
+https://codeburst.io/the-simple-guide-to-this-in-javascript-24a6638b1105
 
+
+### B
