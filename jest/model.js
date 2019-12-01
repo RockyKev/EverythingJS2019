@@ -12,13 +12,13 @@ export default class Model {
   }
 
   record(data) {
-    const primaryKey = "id";
+
     const mappedData = data.map(entry => {
-      if (entry[primaryKey]) {
+      if (entry[this.$options.primaryKey]) {
         return entry;
       }
 
-      entry[primaryKey] = Date.now();
+      entry[this.$options.primaryKey] = Date.now();
       return entry;
     });
     this.$collection.push(...mappedData);
@@ -29,16 +29,16 @@ export default class Model {
   }
 
   find(key) {
-    const primaryKey = "id";
-    const entry = this.$collection.find(entry => entry[primaryKey] === key);
+
+    const entry = this.$collection.find(entry => entry[this.$options.primaryKey] === key);
 
     return entry ? Object.assign({}, entry) : null;
   }
 
   update(key, data) {
-    const primaryKey = "id";
+
     const index = this.$collection.findIndex(
-      entry => entry[primaryKey] === key
+      entry => entry[this.$options.primaryKey] === key
     );
 
     if (index < 0) {
