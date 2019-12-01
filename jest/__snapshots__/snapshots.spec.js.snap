@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user matches 1`] = `"{\\"name\\":\\"Tony Tinkerton\\",\\"age\\":42,\\"job\\":\\"inventor\\"}"`;
