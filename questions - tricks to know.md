@@ -101,4 +101,5 @@ loop1: for (let i = 0; i < haystacks.length; i++) {
 https://codeburst.io/the-simple-guide-to-this-in-javascript-24a6638b1105
 
 
-### B
+### Advances
+https://github.com/lydiahallie/javascript-questions/tree/master/en-EN
